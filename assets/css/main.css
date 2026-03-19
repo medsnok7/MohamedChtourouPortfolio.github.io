@@ -53,7 +53,7 @@ body {
 }
 
 @keyframes typing {
-    to { width: 100%; }
+    to { width: 90%; }
 }
 
 @keyframes blink {
@@ -230,43 +230,47 @@ body {
     color: #818cf8;
 }
 /* NAV Container */
+/* Nav container */
 #nav {
     display: flex;
-    justify-content: space-between; /* links on left, icons on right */
+    flex-wrap: wrap;                /* allow wrapping when zoomed */
+    justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background: rgba(255, 255, 255, 0.05); /* subtle glassy background */
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
+    width: 100%;
+    max-width: 1200px;             /* matches main content */
     margin: 20px auto;
-    max-width: 1000px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);    /* modern glass effect */
+    border-radius: 15px;
+    box-sizing: border-box;
+    min-height: 60px;               /* prevents collapsing on zoom */
+    overflow: visible;              /* ensures children are visible */
 }
 
-/* Links */
-#nav .links {
-    list-style: none;
+/* Flex lists */
+#nav .links,
+#nav .icons {
     display: flex;
-    gap: 25px;
+    flex-wrap: wrap;                /* wrap items when zoomed */
+    align-items: center;
+    gap: 20px;
 }
 
+/* Links styling */
 #nav .links li a {
-    color: #cbd5f5;            /* soft text color */
-    text-decoration: none;
+    color: #cbd5f5;
     font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;            /* prevent breaking link words */
     transition: color 0.3s;
 }
 
 #nav .links li a:hover {
-    color: #818cf8;            /* highlight color on hover */
+    color: #818cf8;
 }
 
-/* Social Icons */
-#nav .icons {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
+/* Social icons */
 #nav .icons li a {
     font-size: 1.3rem;
     color: #cbd5f5;
@@ -275,17 +279,22 @@ body {
 
 #nav .icons li a:hover {
     color: #818cf8;
-    transform: scale(1.2); /* subtle pop effect */
+    transform: scale(1.2);
 }
 
-/* Responsive for smaller screens */
+/* Mobile / small screens */
 @media (max-width: 768px) {
     #nav {
         flex-direction: column;
-        gap: 15px;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 15px;
     }
-    #nav .links, #nav .icons {
+
+    #nav .links,
+    #nav .icons {
         justify-content: center;
+        gap: 15px;
     }
 }
 /* Social icons */
