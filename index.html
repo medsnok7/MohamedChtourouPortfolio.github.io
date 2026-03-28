@@ -1,136 +1,305 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="en">
+
 <head>
-    <title>Mohamed Chtourou Portfolio</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Mohamed Chtourou — Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<div id="wrapper">
+    <!-- Cursor -->
+    <div id="cursor-ring"></div>
+    <div id="cursor-dot"></div>
 
-    <!-- INTRO -->
-    <section id="intro">
-        <h1 class="typing">MOHAMED CHTOUROU</h1>
-        <p>Software Engineer | AI | C++ | Python</p>
-    </section>
+    <!-- Scroll bar -->
+    <div id="scroll-bar"></div>
 
-
+    <!-- Particles -->
+    <canvas id="particles"></canvas>
 
     <!-- NAV -->
-    <nav id="nav">
-    <ul class="links">
-        <li class="active"><a href="index.html">PORTFOLIO</a></li>
-        <li><a href="generic.html">ABOUT ME</a></li>
-        <li><a href="images/Resume.pdf" target="_blank">RESUME</a></li>
-    </ul>
-    <ul class="icons">
-        <li><a href="https://github.com/medsnok7" target="_blank" class="fab fa-github"></a></li>
-        <li><a href="https://www.linkedin.com/in/mohamed-chtourou-61a002242/" target="_blank" class="fab fa-linkedin"></a></li>
-    </ul>
-</nav>
+    <nav>
+        <a href="#hero" class="nav-logo">M.<span>C</span></a>
+        <ul class="nav-links">
+            <li><a href="#featured">Work</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="images/Resume.pdf" target="_blank">Résumé ↗</a></li>
+        </ul>
+        <div class="nav-icons">
+            <a href="https://github.com/medsnok7" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/mohamed-chtourou-61a002242/" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+        </div>
+    </nav>
 
-    <!-- MAIN -->
-    <div id="main">
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-rule"></div>
+        <div class="hero-tag">Software Engineer · Sfax, Tunisia</div>
+        <h1 class="hero-name glitch" data-text="Mohamed Chtourou">
+            Mohamed<br><em>Chtourou</em>
+        </h1>
+        <p class="hero-sub">AI &nbsp;·&nbsp; C++ &nbsp;·&nbsp; Embedded Systems &nbsp;·&nbsp; Automotive</p>
+        <div class="hero-terminal">
+            <span class="prompt">~/portfolio $ </span><span id="typed-text"></span>
+        </div>
+        <div class="hero-scroll">
+            <span>scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
 
-        <!-- FEATURED -->
-        <article class="post featured">
-            <h2>GAN Image Generator</h2>
-            <p>Built a GAN-based system for image generation using PyTorch and Docker.</p>
-            <img src="images/generated_anime_faces.png" />
-            <a href="https://github.com/medsnok7/generative_model" class="button" target="_blank">View Project</a>
-        </article>
-
-        <!-- PROJECTS -->
-        <h2 class="section-title">Projects</h2>
-
-        <section class="posts">
-
-            <article>
-                <h3>Face Recognition</h3>
-                <img src="images/pic01.jpg" />
-                <p>OpenCV + LBP face recognition system.</p>
-                <a href="https://github.com/medsnok7/face-recognition" target="_blank" class="button">GitHub</a>
-            </article>
-
-            <article>
-                <h3>Hand Gesture Control</h3>
-                <img src="images/image_1728341652.6717677.jpg" />
-                <p>Gesture-based system using OpenCV.</p>
-                <a href="https://github.com/medsnok7/hand_gesture" target="_blank" class="button">GitHub</a>
-            </article>
-
-            <article>
-                <h3>Neural Network from Scratch</h3>
-                <img src="images/cluster_model.png" />
-                <p>Implemented NN using NumPy.</p>
-                <a href="https://github.com/medsnok7/custom_cluster_model" class="button">GitHub</a>
-            </article>
-
-            <article>
-                <h3>Chatbot (NLP)</h3>
-                <img src="images/pic02.jpg" />
-                <p>NLP chatbot using deep learning.</p>
-                <a href="https://github.com/medsnok7/Pytorch-NLP-" target="_blank" class="button">GitHub</a>
-            </article>
-
-            <article>
-                <h3>Robotic Arm</h3>
-                <img src="images/pic05.jpg" />
-                <p>6 DOF robotic arm design.</p>
-                <a href="https://github.com/medsnok7/Robotic-Arm" target="_blank" class="button">GitHub</a>
-            </article>
-
-            <article>
-                <h3>Shopping App</h3>
-                <img src="images/pic03.jpg" />
-                <p>Flutter + Firebase e-commerce app.</p>
-                <a href="https://github.com/medsnok7/mobileAppCon" target="_blank" class="button">GitHub</a>
-            </article>
-
-        </section>
+    <!-- STATS STRIP -->
+    <div id="stats">
+        <div class="stat-item reveal">
+            <span class="stat-num" data-target="6">0</span>
+            <span class="stat-label">AI Projects</span>
+        </div>
+        <div class="stat-item reveal" style="transition-delay:0.1s">
+            <span class="stat-num" data-target="1.5">0</span>
+            <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-item reveal" style="transition-delay:0.2s">
+            <span class="stat-num" data-target="3">0</span>
+            <span class="stat-label">Competitions Won</span>
+        </div>
+        <div class="stat-item reveal" style="transition-delay:0.3s">
+            <span class="stat-num" data-target="1">0</span>
+            <span class="stat-label">National Rank — CS Bac</span>
+        </div>
     </div>
 
-    <!-- FOOTER -->
-<!-- Footer -->
-        <footer id="footer">
-            <div class="footer-container">
-                <div class="footer-about">
-                    <h2>Mohamed Chtourou</h2>
-                    <p>Software Engineer specializing in AI, Embedded Systems, and Automotive Software.</p>
+    <!-- FEATURED -->
+    <section id="featured">
+        <div class="section-label">Featured Work</div>
+        <h2 class="section-title reveal">GAN <em>Image</em><br>Generator</h2>
+        <div class="featured-inner">
+            <div class="featured-img reveal">
+                <div class="featured-corner">PyTorch · Docker</div>
+                <img src="images/generated_anime_faces.png" alt="GAN Generated Faces"
+                    onerror="this.style.display='none';this.parentElement.style.background='#161616';this.parentElement.style.minHeight='320px'" />
+            </div>
+            <div class="featured-content reveal" style="transition-delay:0.15s">
+                <p>Built a complete Generative Adversarial Network pipeline from architecture design to stable training.
+                    The system features checkpoint management, multi-dataset support, and produces high-fidelity
+                    synthetic imagery — containerized with Docker for reproducibility.</p>
+                <div class="tag-list">
+                    <span class="tag">PyTorch</span>
+                    <span class="tag">GANs</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">Computer Vision</span>
                 </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Portfolio</a></li>
-                        <li><a href="generic.html">About</a></li>
-                        <li><a href="images/Resume.pdf" target="_blank">Resume</a></li>
-                    </ul>
+                <div class="magnetic">
+                    <a href="https://github.com/medsnok7/generative_model" target="_blank" class="btn"><span>View on
+                            GitHub ↗</span></a>
                 </div>
-                <div class="footer-contact">
-                    <h3>Contact</h3>
-                    <p>Sfax, Tunisia</p>
-                    <p><a href="mailto:mohamed.chtourou@insat.ucar.tn">Email Me</a></p>
-                    <div class="socials">
-                        <a href="https://github.com/medsnok7" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/mohamed-chtourou-61a002242/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.facebook.com/mohamed.chtourou.69666/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="section-label">All Projects</div>
+        <h2 class="section-title reveal">Selected <em>Work</em></h2>
+        <div class="projects-grid">
+
+            <a href="https://github.com/medsnok7/face-recognition" target="_blank" class="project-card reveal">
+                <div class="project-img">
+                    <img src="images/pic01.jpg" alt="Face Recognition"
+                        onerror="this.style.background='#1a1a1a';this.style.display='block'">
+                </div>
+                <div class="project-body">
+                    <div class="project-num">01</div>
+                    <h3>Face Recognition</h3>
+                    <p>Eigenfaces, Fisherfaces & LBPH comparison with real-time dashboard using OpenCV.</p>
+                </div>
+                <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+            </a>
+
+            <a href="https://github.com/medsnok7/hand_gesture" target="_blank" class="project-card reveal"
+                style="transition-delay:0.1s">
+                <div class="project-img">
+                    <img src="images/image_1728341652.6717677.jpg" alt="Hand Gesture"
+                        onerror="this.style.background='#1a1a1a'">
+                </div>
+                <div class="project-body">
+                    <div class="project-num">02</div>
+                    <h3>Hand Gesture Control</h3>
+                    <p>Real-time gesture recognition with dynamic animations via OpenCV + MediaPipe.</p>
+                </div>
+                <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+            </a>
+
+            <a href="https://github.com/medsnok7/custom_cluster_model" target="_blank" class="project-card reveal"
+                style="transition-delay:0.2s">
+                <div class="project-img">
+                    <img src="images/cluster_model.png" alt="Neural Network" onerror="this.style.background='#1a1a1a'">
+                </div>
+                <div class="project-body">
+                    <div class="project-num">03</div>
+                    <h3>Neural Network from Scratch</h3>
+                    <p>Full forward/backpropagation implementation in NumPy with decision boundary visualization.</p>
+                </div>
+                <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+            </a>
+
+            <a href="https://github.com/medsnok7/Pytorch-NLP-" target="_blank" class="project-card reveal"
+                style="transition-delay:0.05s">
+                <div class="project-img">
+                    <img src="images/pic02.jpg" alt="Chatbot" onerror="this.style.background='#1a1a1a'">
+                </div>
+                <div class="project-body">
+                    <div class="project-num">04</div>
+                    <h3>Chatbot (NLP)</h3>
+                    <p>Deep learning NLP chatbot built with PyTorch for natural language understanding.</p>
+                </div>
+                <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+            </a>
+
+            <a href="https://github.com/medsnok7/Robotic-Arm" target="_blank" class="project-card reveal"
+                style="transition-delay:0.15s">
+                <div class="project-img">
+                    <img src="images/pic05.jpg" alt="Robotic Arm" onerror="this.style.background='#1a1a1a'">
+                </div>
+                <div class="project-body">
+                    <div class="project-num">05</div>
+                    <h3>Robotic Arm</h3>
+                    <p>6 DOF robotic arm design with inverse kinematics and control systems.</p>
+                </div>
+                <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+            </a>
+
+            <a href="https://github.com/medsnok7/mobileAppCon" target="_blank" class="project-card reveal"
+                style="transition-delay:0.25s">
+                <div class="project-img">
+                    <img src="images/pic03.jpg" alt="Shopping App" onerror="this.style.background='#1a1a1a'">
+                </div>
+                <div class="project-body">
+                    <div class="project-num">06</div>
+                    <h3>Shopping App</h3>
+                    <p>Full-stack Flutter + Firebase e-commerce application with real-time data sync.</p>
+                </div>
+                <span class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="section-label">Who I Am</div>
+        <h2 class="section-title reveal">Engineer &<br><em>Builder</em></h2>
+        <div class="about-grid">
+            <div class="about-left reveal">
+                <p>Software Engineer specializing in C++, Python, and embedded systems — with 1.5+ years of professional
+                    experience in automotive software, ECU simulation, and high-performance applications.</p>
+                <p>Passionate about bridging intelligent software and real-world industrial challenges. I work across
+                    Linux environments, AUTOSAR-based architectures, and AI frameworks with equal depth.</p>
+                <p>IELTS C1 &nbsp;·&nbsp; TCF B2 &nbsp;·&nbsp; Lions International founding member.</p>
+            </div>
+            <div class="reveal" style="transition-delay:0.15s">
+                <div class="skills-columns">
+                    <div class="skill-group">
+                        <h4>Languages</h4>
+                        <div class="skill-item">C / C++</div>
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">SQL / NoSQL</div>
+                        <div class="skill-item">Bash scripting</div>
+                    </div>
+                    <div class="skill-group">
+                        <h4>AI & ML</h4>
+                        <div class="skill-item">PyTorch</div>
+                        <div class="skill-item">OpenCV / MediaPipe</div>
+                        <div class="skill-item">Scikit-learn</div>
+                        <div class="skill-item">GANs, CNNs, NLP</div>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Embedded & Auto</h4>
+                        <div class="skill-item">AUTOSAR</div>
+                        <div class="skill-item">SOME/IP · CAN Bus</div>
+                        <div class="skill-item">Embedded Linux</div>
+                        <div class="skill-item">ECU Simulation</div>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Tooling</h4>
+                        <div class="skill-item">Docker · Jenkins</div>
+                        <div class="skill-item">Git · CMake</div>
+                        <div class="skill-item">Wireshark</div>
+                        <div class="skill-item">Jira · CI/CD</div>
+                    </div>
+                </div>
+
+                <div class="achievements">
+                    <div class="section-label" style="margin-bottom:24px">Achievements</div>
+                    <div class="achieve-row">
+                        <span class="achieve-medal">🥇</span>
+                        <div>
+                            <strong>1st Place — Computer Science Baccalaureate, Sfax</strong><br>
+                            <span>National ranking in CS track</span>
+                        </div>
+                    </div>
+                    <div class="achieve-row">
+                        <span class="achieve-medal">🥈</span>
+                        <div>
+                            <strong>2nd Place — Line Follower Robot Competition</strong><br>
+                            <span>Embedded robotics challenge</span>
+                        </div>
+                    </div>
+                    <div class="achieve-row">
+                        <span class="achieve-medal">🥉</span>
+                        <div>
+                            <strong>3rd Place — Space Tech Hackathon</strong><br>
+                            <span>Innovative software solution</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2026 Mohamed Chtourou — Built with passion 🚀</p>
-            </div>
-        </footer>
-</div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title reveal">Let's build<br>something <em>great.</em></h2>
+        <p class="reveal" style="color:var(--muted);max-width:480px;margin:0 auto 32px;text-align:center">
+            Open to automotive software roles, AI engineering, and interesting side projects.
+        </p>
+        <a href="mailto:mohamed.chtourou@insat.ucar.tn" class="contact-email reveal">
+            mohamed.chtourou@insat.ucar.tn
+        </a>
+        <div class="contact-socials reveal">
+            <a href="https://github.com/medsnok7" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/mohamed-chtourou-61a002242/" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/mohamed.chtourou.69666/" target="_blank"><i
+                    class="fab fa-facebook"></i></a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Mohamed Chtourou</p>
+        <p>Built with passion — <a href="images/Resume.pdf" target="_blank">Download Résumé ↗</a></p>
+    </footer>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
